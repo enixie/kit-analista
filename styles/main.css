@@ -499,13 +499,17 @@ body {
     display: flex;
     flex: 1;
     overflow: hidden;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .workspace-canvas {
     flex: 1;
     padding: var(--spacing-xl);
-    overflow-y: auto;
+    overflow: auto;
     background-color: var(--color-bg-primary);
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .workspace-sidebar {
@@ -679,6 +683,12 @@ body {
     gap: var(--spacing-lg);
     overflow-x: auto;
     padding-bottom: var(--spacing-md);
+    width: 100%;
+}
+
+.workspace-canvas .kanban-board {
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .kanban-column {

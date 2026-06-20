@@ -154,6 +154,13 @@ class ManagerToolsApp {
     filterByCategory(categoryId) {
         const pageTitle = document.getElementById('pageTitle');
         
+        // If we're in a tool workspace, go back to dashboard first
+        if (!document.getElementById('dashboardView').classList.contains('hidden')) {
+            // Already on dashboard, just filter
+        } else {
+            this.goBack();
+        }
+        
         if (categoryId === 'all') {
             this.renderToolsGrid(ToolsRegistry.tools);
             pageTitle.textContent = 'Dashboard';
