@@ -501,19 +501,24 @@ body {
     overflow: hidden;
     width: 100%;
     box-sizing: border-box;
+    max-width: 1600px;
+    margin: 0 auto;
 }
 
 .workspace-canvas {
     flex: 1;
-    padding: var(--spacing-xl);
+    padding: var(--spacing-lg);
     overflow: auto;
     background-color: var(--color-bg-primary);
     width: 100%;
     box-sizing: border-box;
+    min-width: 0;
+    max-width: calc(100% - 320px);
 }
 
 .workspace-sidebar {
-    width: 320px;
+    width: 300px;
+    min-width: 300px;
     background-color: var(--color-bg-secondary);
     border-left: 1px solid var(--color-border);
     padding: var(--spacing-lg);
@@ -684,15 +689,21 @@ body {
     overflow-x: auto;
     padding-bottom: var(--spacing-md);
     width: 100%;
+    max-width: 100%;
+    min-width: 0;
 }
 
 .workspace-canvas .kanban-board {
     width: 100%;
     box-sizing: border-box;
+    max-width: 100%;
+    min-width: 0;
 }
 
 .kanban-column {
-    min-width: 280px;
+    min-width: 240px;
+    max-width: 280px;
+    flex: 0 0 auto;
     background-color: var(--color-bg-secondary);
     border-radius: var(--radius-md);
     border: 1px solid var(--color-border);
@@ -1110,9 +1121,33 @@ body {
 /* ========================================
    RESPONSIVE DESIGN
    ======================================== */
-@media (max-width: 1024px) {
+@media (max-width: 1400px) {
+    .workspace-body {
+        max-width: 1300px;
+    }
+    
     .workspace-sidebar {
         width: 280px;
+        min-width: 280px;
+    }
+    
+    .workspace-canvas {
+        max-width: calc(100% - 280px);
+    }
+}
+
+@media (max-width: 1024px) {
+    .workspace-sidebar {
+        width: 260px;
+        min-width: 260px;
+    }
+    
+    .workspace-canvas {
+        max-width: calc(100% - 260px);
+    }
+    
+    .workspace-body {
+        max-width: 100%;
     }
 }
 
@@ -1158,8 +1193,13 @@ body {
     
     .workspace-sidebar {
         width: 100%;
+        min-width: 100%;
         border-left: none;
         border-top: 1px solid var(--color-border);
+    }
+    
+    .workspace-canvas {
+        max-width: 100%;
     }
     
     .swot-grid {
