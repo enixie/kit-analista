@@ -3,17 +3,23 @@
 __pycache__/
 *.o
 *.obj
+*.class
+*.exe
+*.dll
+*.so
+*.a
+*.out
 dist/
 build/
 target/
 
 # Dependencies
-.venv/
-venv/
 node_modules/
-.julia/
-.zig-cache/
-zig-cache/
+venv/
+.venv/
+.env
+.env.local
+*.env.*
 
 # Logs and temp files
 *.log
@@ -21,18 +27,13 @@ zig-cache/
 *.swp
 *.swo
 
-# Environment
-.env
-.env.local
-.env.*
-
-# Editors
+# Editors and IDEs
 .vscode/
 .idea/
 *.swp
 *.swo
 
-# OS
+# System files
 .DS_Store
 Thumbs.db
 
@@ -41,43 +42,14 @@ coverage/
 htmlcov/
 .coverage
 
-# Python
-*.pyc
-__pycache__/
-*.pyo
-*.pyd
-.Python
-*.so
-*.egg-info/
-.eggs/
+# Python specific
+.mypy_cache/
+.pytest_cache/
 
-# Node.js
-node_modules/
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-
-# Java
-*.class
-*.jar
-*.war
-*.ear
-*.nar
-target/
+# Java/Gradle
 .gradle/
-!gradle/
-gradle/
 
-# C/C++
-*.o
-*.obj
-*.exe
-*.dll
-*.so
-*.a
-*.dylib
-
-# Archives
+# Compressed files
 *.zip
 *.gz
 *.tar
@@ -100,141 +72,3 @@ gradle/
 *.tar.bz2
 *.tar.xz
 *.tar.zst
-
-# Testing
-.mypy_cache/
-.pytest_cache/
-.nyc_output/
-coverage/
-
-# Distribution
-dist/
-build/
-*.egg-info/
-.tox/
-.nox/
-.pytest_cache/
-.hypothesis/
-
-# IDE specific
-.vscode/
-.idea/
-*.swp
-*.swo
-*~
-
-# System
-.DS_Store
-Thumbs.db
-ehthumbs.db
-Icon?
-.directory
-.Spotlight-V100
-.Trashes
-apfs_meta
-.metadata
-lost+found
-
-# Configuration
-.env
-.env.local
-.env.*
-!.env.example
-!.env.sample
-!.env.template
-
-# Secrets
-config/secrets.yml
-config/credentials.yml
-config/master.key
-
-# Database
-*.db
-*.db-journal
-*.sqlite
-*.sqlite3
-
-# Cache
-.cache/
-.cargo/
-.node-gyp/
-.npm/
-.yarn/
-.bower-cache/
-.bower-registry/
-
-# Backup
-*~
-*.bak
-*.backup
-*.old
-*.orig
-*.rej
-*.swp
-*.swo
-
-# Temporary
-tmp/
-temp/
-*.tmp
-*.temp
-*.temp.*
-
-# Logs
-*.log
-logs/
-log/
-
-# Process
-*.pid
-
-# Generated
-generated/
-.autotools/
-.cmake/
-Makefile
-CMakeFiles/
-CMakeCache.txt
-cmake_install.manifest
-install_manifest.txt
-
-# Documentation
-docs/_build/
-docs/build/
-
-# Virtual environments
-.venv/
-venv/
-env/
-ENV/
-.ENV/
-.env.d/
-.python-version
-.requirements.txt.swp
-
-# Ruby
-*.gem
-*.rbc
-.bundle/
-.rbenv-vars
-.rbenv-version
-.ruby-version
-.rubocop.yml
-.rubocop
-.rubocop_todo.yml
-.rubocop_todo
-.rubocop_cache/
-.rubocop-cache/
-.rubocop_offenses.json
-.rubocop_offenses_by_severity.json
-.rubocop_offenses_count.json
-.rubocop_offenses_count_by_severity.json
-.rubocop_offenses_count_by_cop.json
-.rubocop_offenses_count_by_cop_and_severity.json
-.rubocop_offenses_count_by_cop_and_severity_and_line.json
-.rubocop_offenses_count_by_cop_and_severity_and_line_and_column.json
-.rubocop_offenses_count_by_cop_and_severity_and_line_and_column_and_message.json
-.rubocop_offenses_count_by_cop_and_severity_and_line_and_column_and_message_and_corrected.json
-.rubocop_offenses_count_by_cop_and_severity_and_line_and_column_and_message_and_corrected_and_corrected_in.json
-.rubocop_offenses_count_by_cop_and_severity_and_line_and_column_and_message_and_corrected_and_corrected_in_and_corrected_in_and_corrected_in_and_corrected_in_and_corrected_in_and_corrected_in_and_corrected_in_and_corrected_in_and_corrected_in_and_corrected_in_and_corrected_in_and_corrected_in_and_corrected_in_and_corrected_in_and_corrected_in_and_corrected_in_and_corrected_in_and_corrected_in_and_corrected_in_and_corrected_in_and_corrected_in_and_corrected_in_and_corrected_in_and_corrected_in_and_corrected_in_and_corrected_in_and_corrected_in_and_corrected_in_and_corrected_in_and_corrected_in_and_corrected_in_and_corrected_in_and_corrected_in_and_corrected_in_and_corrected_in_and_corrected_in_and_corrected_in_and_corrected_in_and_corrected_in_and_corrected_in_and_corrected_in_and_corrected_in_and_corrected_in_and_corrected_in_and_corrected_in_and_corrected_in_and_corrected_in_and_corrected_in_and_corrected_in_and_corrected_in_and_corrected_in_and_corrected_in_and_corrected_in_and_corrected_in_and_corrected_in_and_corrected_in_and_corrected_in_and_corrected_in_and_corrected_in_and_corrected_in_and_corrected_in_and_corrected_in_and_corrected_in_and_corrected_in_and_corrected_in_and_corrected_in_and_corrected_in_and_corrected_in_and_corrected_in_and_corrected_in_and_corrected_in_and_corrected_in_and_corrected_in_and_corrected_in_and_corrected_in_and_corrected_in_and_corrected_in_and_corrected_in_and_corrected_in_and_corrected_in_and_corrected_in_and_corrected_in_and_corrected_in_and_corrected_in_and_corrected_in_and_corrected_in_and_corrected_in_and_corrected_in_and_corrected_in_and_corrected_in_and_corrected_in_and_corrected_in_and_corrected_in_and_corrected_in_and_corrected_in_and_corrected_in_and_corrected_in_and_corrected_in_and_corrected_in_and_corrected_in_and_corrected_in_and_corrected_in_and_corrected_in_and_corrected_in_and_corrected_in_and_corrected_in_and_corrected_in_and_corrected_in_and_corrected_in_and_corrected_in_and_corrected_in_and_corrected_in_and_corrected_in_and_corrected_in_and_corrected_in_and_corrected_in_and_corrected_in_and_corrected_in_and_corrected_in_and_corrected_in_and_corrected_in_and_corrected_in_and_corrected_in_and_corrected_in_and_corrected_in_and......
-```
